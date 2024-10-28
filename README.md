@@ -8,4 +8,4 @@ This approach aims to maintain an organized queuing process for individuals visi
 
 ### UML
 
-<img src="https://github.com/Retchizu/singleton-pattern/singleton-pattern-uml">
+<img src="https://github.com/Retchizu/singleton-pattern/blob/main/singleton-pattern-uml.png">
