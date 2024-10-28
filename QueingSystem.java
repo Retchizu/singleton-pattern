@@ -1,8 +1,11 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class QueingSystem {
     private static QueingSystem instance;
-    private int currentQueueNumber;
+    private AtomicInteger currentQueueNumber;
 
     private QueingSystem() {
+        currentQueueNumber = new AtomicInteger(0);
 
     }
 
@@ -13,19 +16,19 @@ public class QueingSystem {
         return instance;
     }
 
-    public int getCurrentQueueNumber() {
+    public AtomicInteger getCurrentQueueNumber() {
         return currentQueueNumber;
     }
 
     public void resetQueueNumber(int queueNumber) {
         if (queueNumber >= 0) {
-            currentQueueNumber = queueNumber;
+            currentQueueNumber.set(queueNumber);
         } else {
             throw new IllegalArgumentException("Queue Number must be non negative");
         }
     }
 
     public void incrementQueueNumber() {
-        currentQueueNumber++;
+        currentQueueNumber.incrementAndGet();
     }
 }

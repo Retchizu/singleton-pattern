@@ -9,7 +9,7 @@ public class PagIbigApp {
         helpDeskStation3.serveCustomer();
 
         // Helpdesk station having an option to reset the queue number
-        helpDeskStation3.resetQueueNumber(6);
+        helpDeskStation3.resetQueueNumber(1);
 
         helpDeskStation1.serveCustomer();
         helpDeskStation2.serveCustomer();

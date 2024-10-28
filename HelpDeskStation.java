@@ -1,3 +1,5 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class HelpDeskStation {
     private int stationNumber;
     private QueingSystem queingSystem;
@@ -8,7 +10,7 @@ public class HelpDeskStation {
     }
 
     public void serveCustomer() {
-        int currentQueueNumber = queingSystem.getCurrentQueueNumber();
+        AtomicInteger currentQueueNumber = queingSystem.getCurrentQueueNumber();
         System.out.println("Station no." + stationNumber + " is serving customer no." + currentQueueNumber);
         queingSystem.incrementQueueNumber();
     }
